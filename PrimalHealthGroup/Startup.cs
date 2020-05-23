@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PrimalHealthGroup.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace PrimalHealthGroup
 {
@@ -24,6 +26,9 @@ namespace PrimalHealthGroup
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<PHGContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("PHGContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

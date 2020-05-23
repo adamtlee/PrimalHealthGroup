@@ -7,5 +7,8 @@ namespace PrimalHealthGroup.Models
 {
     public class Appointment
     {
+        public int AppointmentId { get; set; }
+        public DateTime DateTime { get; set; }
+        public Location Location { get; set; }
     }
 }
