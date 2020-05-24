@@ -54,7 +54,7 @@ namespace PrimalHealthGroup.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PatientId,RegistrationDate,FirstName,MiddleName,LastName,Age,Email,Description,InsuranceType,IssueType")] Patient patient)
+        public async Task<IActionResult> Create([Bind("PatientId,RegistrationDate,FirstName,MiddleName,LastName,Age,Email,InsuranceType")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace PrimalHealthGroup.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PatientId,RegistrationDate,FirstName,MiddleName,LastName,Age,Email,Description,InsuranceType,IssueType")] Patient patient)
+        public async Task<IActionResult> Edit(int id, [Bind("PatientId,RegistrationDate,FirstName,MiddleName,LastName,Age,Email,InsuranceType")] Patient patient)
         {
             if (id != patient.PatientId)
             {

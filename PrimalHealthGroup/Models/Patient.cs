@@ -24,12 +24,8 @@ namespace PrimalHealthGroup.Models
         public string LastName { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
-        public string Description { get; set; }
 
         [Display(Name = "Insurance")]
         public Insurance InsuranceType { get; set; }
-
-        [Display(Name = "Issue Type")]
-        public Concentration IssueType { get; set; }
     }
 }
