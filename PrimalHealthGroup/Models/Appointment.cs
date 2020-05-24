@@ -10,5 +10,9 @@ namespace PrimalHealthGroup.Models
         public int AppointmentId { get; set; }
         public DateTime DateTime { get; set; }
         public Location Location { get; set; }
+        public string Description { get; set; }
+        public virtual ICollection<Patient> Patients { get; set; }
+        public virtual ICollection<Doctor> Doctors { get; set; }
+
     }
 }
