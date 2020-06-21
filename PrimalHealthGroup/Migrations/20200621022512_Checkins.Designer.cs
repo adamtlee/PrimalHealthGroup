@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PrimalHealthGroup.Data;
 
 namespace PrimalHealthGroup.Migrations
 {
     [DbContext(typeof(PHGContext))]
-    partial class PHGContextModelSnapshot : ModelSnapshot
+    [Migration("20200621022512_Checkins")]
+    partial class Checkins
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
